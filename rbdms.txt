@@ -1,0 +1,49 @@
+
+date : 12/08/2024 
+A Relational Schema specifies: the name of a relation, and the attributes.
+A Relational Instance is a table made up of the attributes, or columns, and the tuples,
+or rows.
+Degree refers to the number of attributes, or columns, in a relation.
+Cardinality refers to the number of tuples, or rows in a relation.
+You can now define the relational terms: relation, degree, and cardinality, and, explain the
+difference between a relational schema and a relational instance.
+
+
+date : 13/08/2024
+
+commands : 
+1.syntax :create database database Name.
+"DROP" is used to delete the entire database.
+2.syntax: drop database database Name.
+3.database read only mode 
+       *) This command helps to avoid further modifications in database
+syntax: Alter database database Name = 1;
+to delete the read only mode ,
+syntax: Alter database database Name = 0;
+
+date : 14/08/2024
+*) dml commands for dealing with creating and altering the table and its columns 
+
+create table employees(
+  id integer,
+  first_name varchar(45),
+  second_name varchar(45)
+);
+select * from employees;
+alter table employees
+rename column id to empid;
+alter table employees
+modify empid varchar(88)
+after first_name;
+
+alter table employees
+drop column empid;
+
+
+ insert into employees
+      values (1,"baskaran","kishore"),
+	   (1,"baskaran","kishore"),
+       (1,"baskaran","kishore");
+       
+       insert into employees(empid, first_name)
+       values(1,"kishore");
